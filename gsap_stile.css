@@ -1,5 +1,11 @@
+@font-face {
+   font-family: "incredibili";
+   src: url("Incredibles.ttf") format("truetype");
+}
+
 body{
-background-color:red; 
+background-color:red;
+overflow-x: hidden 
 }
 
 #header{
@@ -22,6 +28,7 @@ height:10%;
 overflow:hidden;
 text-align:center;
 background-color:black;
+letter-spacing: 6;
 }
 
 #titolo{
@@ -33,7 +40,9 @@ height:30%;
 overflow:hidden;
 text-align:center;
 background-color:pink;
-/*background-image:titolo*/
+font-family: incredibili;
+font-size: -webkit-xxx-large;
+letter-spacing: 6;
 }
 
 #logo{
@@ -46,6 +55,147 @@ height:30%;
 overflow:hidden;
 background-color:blue;
 /*background-image:logo*/
+}
+
+#elenco{
+position:absolute;
+color:white;
+top:35%;
+left:5%;
+width:90%;
+/*background-color:gray;*/
+}
+
+.singolo{
+  width:100%;
+  display:inline-block;
+  margin-top: 2%;
+}
+
+.contenitore{
+  width:100%;
+  overflow:hidden;
+  background-color:yellow;
+  border: 0.2em solid black;
+  display: inline-block;
+}
+
+.capitolo{
+color:black;
+}
+
+.esci{
+ width:5%;
+ height:2%;
+ padding:0;
+ margin-top:0;
+ margin-right:5%;
+ float:right;
+ background-color:blue;
+ overflow:none;
+}
+
+.wrapper{
+ height:0;
+ margin-top: 2%;
+ margin-bottom: 2%;
+ overflow:hidden;
+ position:relative;
+ display:none;
+}
+
+.immagine{
+ left: 100%;
+ width:80%;
+ height:100%;
+ display:none;
+ background-color:yellow;
+ overflow:none;
+ background-color:blue;
+ position:absolute;
+ z-index:0;
+}
+
+.next{
+  display:none;
+  position:absolute;
+  top: 20%;
+  height: 60%;
+  opacity: 0.7;
+  right:2%;
+  z-index:2;
+}
+
+.previous{
+  display:none;
+  position:absolute;
+  top: 20%;
+  height: 60%;
+  opacity: 0.7;
+  left:2%;
+  z-index:2;
+}
+
+#footer{
+position:absolute;
+color:white;
+left:0%;
+top:200%;
+height:30%;
+width:100%;
+text-align:center;
+overflow:hidden;
+background-color:black;
+/*background-image:logo*/  
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+background-color:red; 
+}
+
+#header{
+position:absolute;
+left: 0%;
+top:0%;
+width:100%;
+height:30%;
+background-color:orange;
+/*background-image:rosso liscio*/
+}
+
+#titolino{
+    position: absolute;
+    color: white;
+    top: 15%;
+    left: 30%;
+    width: 40%;
+    height: 10%;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+}
+
+#titolo{
+    top: 35%;
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 60%;
+    overflow: hidden;
+    text-align: center;
+    background-color: pink;
+}
+
+#logo{
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 2%;
+    width: 10%;
+    height: 20%;
+    overflow: hidden;
+    background-color: blue;
 }
 
 #novita{
@@ -62,108 +212,111 @@ background-color:gray;
 }
 
 #cards{
-position:absolute;
-top:100%;
-left:10%;
-width:80%;
-height:90%;
-text-align:center;
-overflow:hidden;
-background-color:yellow;
-/*background-image:black*/
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 80%;
+    height: 370%;
+    /* text-align: center; */
+    overflow: hidden;
+    background-color: yellow;
+    font-size: xxx-large;
+    
 }
 
 .box {
-height:98%;
-width:18%;
-top:1%;
-background-color:black;
-display:inline-block;
--webkit-backface-visibility:hidden;
-backface-visibility:hidden;
-perspective: 1000px;
-transform-style: preserve-3d;
+    height: 19%;
+    width: 98%;
+    top: 1%;
+    left: 1%;
+    background-color: black;
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .flash {
   /*background-color: pink;
   /*background-image:black*/
   position:absolute;
-  left:1%;
+  top:1%;
 }
 
 .helen{
   /*background-color: green;
   /*background-image:black*/
   position:absolute;
-  left:21%; 
+  top:21%; 
 }
 
 .bob{
   /*background-color: orange;
   /*background-image:black*/
   position:absolute;
-  left:41%;
+  top:41%;
 }
 
 .violet{
   /*background-color: yellow;
   /*background-image:black*/
   position:absolute;
-  left:61%;
+  top:61%;
 }
 
 .jack{
   /*background-color: blue;
   /*background-image:black*/
   position:absolute;
-  left:81%;
+  top:80.5%;
 }
 
 .box2 {
-height:98%;
-width:18%;
-top:1%;
-background-color:black;
-display:none; 
--webkit-backface-visibility:hidden;
-backface-visibility:hidden;
-perspective: 1000;
-transform-style: preserve-3d;
+    height: 19%;
+    width: 98%;
+    top: 1%;
+    left: 1%;
+    background-color: black;
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .flash2 {
   /*background-image:green;*/
   position:absolute;
   transform: rotateY(180deg);
-  left:1%;
+  top:1%;
 }
 
 .helen2{
   /*background-image:black*/
   position:absolute;
-  left:21%;
+  top:21%;
   transform: rotateY(180deg);  
 }
 
 .bob2{
   /*background-image:black*/
   position:absolute;
-  left:41%;
+  top:41%;
   transform: rotateY(180deg);
 }
 
 .violet2{
   /*background-image:black*/
   position:absolute;
-  left:61%;
+  top:61%;
   transform: rotateY(180deg);
 }
 
 .jack2{
   /*background-image:black*/
   position:absolute;
-  left:81%;
+  top:80.5%;
   transform: rotateY(180deg);
 }
 
@@ -174,7 +327,8 @@ transform-style: preserve-3d;
   width:5%;
   height:2%;
   overflow:hidden;
-  background-color:red;  
+  background-color:red;
+  font-size: xxx-large;  
 }
 
 .titolo2{
@@ -208,6 +362,7 @@ transform-style: preserve-3d;
   overflow: hidden;
   text-align: center;
   background-color: red;
+  font-size: xxx-large;
 }
 
 .foto{
@@ -245,11 +400,12 @@ transform-style: preserve-3d;
 position:absolute;
 color:white;
 left:0%;
-top:220%;
+top:500%;
 height:30%;
 width:100%;
 text-align:center;
 overflow:hidden;
 background-color:black;
 /*background-image:logo*/  
+}
 }
