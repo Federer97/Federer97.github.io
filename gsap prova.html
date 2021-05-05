@@ -1,0 +1,105 @@
+<html>
+
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<link rel="stylesheet" href="gsap_stile.css">
+
+<title>
+</title>
+
+</head>
+
+<body>
+
+<section id="header">
+
+<div id="titolino">Parrocchia Madonna di Fatima</div>
+<div id="titolo">ESTATE RAGAZZI 2021</div>
+<img id="logo">
+
+</section>
+
+<section id="novita"></section>
+
+<section id="cards">
+
+<div id="a" class="box flash" onclick="flip(this.id)"><div class="foto uno"></div></div>
+<div id="b" class="box helen" onclick="flip(this.id)"><div class="foto due"></div></div>
+<div id="c" class="box bob" onclick="flip(this.id)"><div class="foto tre"></div></div>
+<div id="d" class="box violet" onclick="flip(this.id)"><div class="foto quattro"></div></div>
+<div id="e" class="box jack" onclick="flip(this.id)"><div class="foto cinque"></div></div>
+
+<div id="a" class="box flash2" >
+
+    <button class="indietro" onclick="flip('a')">x</button>
+    <div class="titolo2">TITOLO</div>
+    <div class="descrizione">Descrizione</div>
+    <button id="giochi" class="avanti" onclick="saluta(this.id)">VAI</button>
+
+</div>
+<div id="b" class="box helen2">
+
+    <button class="indietro" onclick="flip('b')">x</button>
+    <div class="titolo2">TITOLO</div>
+    <div class="descrizione">Descrizione</div>
+    <button id="cruciverba" class="avanti" onclick="saluta(this.id)">VAI</button>
+    
+</div>
+<div id="c" class="box bob2">
+    
+    <button class="indietro" onclick="flip('c')">x</button>
+    <div class="titolo2">TITOLO</div>
+    <div class="descrizione">Descrizione</div>
+    <button id="scenette" class="avanti" onclick="saluta(this.id)">VAI</button>
+    
+</div>
+<div id="d" class="box violet2">
+    
+    <button class="indietro" onclick="flip('d')">x</button>
+    <div class="titolo2">TITOLO</div>
+    <div class="descrizione">Descrizione</div>
+    <button id="bans" class="avanti" onclick="saluta(this.id)">VAI</button>
+    
+</div>
+<div id="e" class="box jack2">
+
+    <button class="indietro" onclick="flip('e')">x</button>
+    <div class="titolo2">TITOLO</div>
+    <div class="descrizione">Descrizione</div>
+    <button id="disegni" class="avanti" onclick="saluta(this.id)">VAI</button>
+    
+</div>
+
+</section>
+
+<section id="footer"></section>
+
+</body>
+
+<footer>
+<script>
+
+var tl = gsap.timeline({});
+
+tl.from(".flash", {duration: 1.2, ease:"bounce", y: 1000})
+ .from(".helen", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
+ .from(".bob", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
+ .from(".violet", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
+ .from(".jack", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9");
+ 
+function flip(scelta){
+
+var t2 = gsap.timeline({});
+t2.to("#"+scelta, {duration:1, rotationY: "+=180"});
+
+}
+
+function saluta(parametro){
+alert(parametro);
+}
+
+</script>
+</footer>
+
+</html>
