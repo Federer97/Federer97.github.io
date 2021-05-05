@@ -3,6 +3,7 @@
 <head>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <link rel="stylesheet" href="video_stile.css">
 
 <title>
@@ -94,6 +95,16 @@ tl.from(".flash", {duration: 1.2, ease:"bounce", y: 1000})
  .from(".jack", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9");
  */
  
+var attivo = true;
+var dimensione = window.matchMedia("(max-width: 600px)"); 
+
+function controlloMediaQuery() {
+  if (dimensione.matches) { // If media query matches
+    attivo = false;
+  } else {
+    attivo = true;
+  }
+}
  
 function apri(idTrama, idVideo, bottone, numImmagine){
 
@@ -103,8 +114,13 @@ if(valore === "false"){
     document.getElementById(bottone).setAttribute('value', "true");
     var t2 = gsap.timeline({});
     t2.to("#"+idTrama, {duration: 0.1, height: 100, display:"block"})
-      .to("#"+idVideo, {duration: 0.4, height: 500, display:"block"}, "-=0.1")
-      .to("#"+numImmagine, {duration: 0.4, height: 600, display:"inline-block"}, "-=0.5");
+      .to("#"+idVideo, {duration: 0.4, height: 500, display:"block"}, "-=0.1");
+    
+    controlloMediaQuery();
+      
+    if(attivo){ 
+    t2.to("#"+numImmagine, {duration: 0.4, height: 600, display:"inline-block"}, "-=0.5");
+    } 
 }
 else {
     document.getElementById(bottone).setAttribute('value', "false");
