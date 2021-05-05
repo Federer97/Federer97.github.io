@@ -3,7 +3,7 @@
    src: url("Incredibles.ttf") format("truetype");
 }
 
-@media only screen and (min-width: 601px){
+@media only screen and (min-width: 768px){
 
 body{
 background-color:red;
