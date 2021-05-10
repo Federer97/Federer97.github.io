@@ -4,6 +4,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 <link rel="stylesheet" href="gsap_stile.css">
 
 <title>
@@ -25,60 +29,60 @@
 
 <section id="cards">
 
-<div id="a" class="box flash" onclick="flip(this.id)"><div class="foto uno"></div></div>
+<div id="a" class="box flash" onclick="flip(this.id)">GIOCHI<div class="foto uno"></div></div>
 <div id="b" class="box helen" onclick="flip(this.id)"><div class="foto due"></div></div>
-<div id="c" class="box bob" onclick="flip(this.id)"><div class="foto tre"></div></div>
-<div id="d" class="box violet" onclick="flip(this.id)"><div class="foto quattro"></div></div>
-<div id="e" class="box jack" onclick="flip(this.id)"><div class="foto cinque"></div></div>
+<div id="c" class="box bob" onclick="flip(this.id)">VIDEO<div class="foto tre"></div></div>
+<div id="d" class="box violet" onclick="flip(this.id)">BALLI<div class="foto quattro"></div></div>
+<div id="e" class="box jack" onclick="flip(this.id)">DISEGNI<div class="foto cinque"></div></div>
 
 <div id="a" class="box flash2" >
 
-    <button class="indietro" onclick="flip('a')">x</button>
-    <div class="titolo2">TITOLO</div>
-    <div class="descrizione">Descrizione</div>
-    <button id="giochi" class="avanti" onclick="saluta(this.id)">
+    <div class="indietro" onclick="flip('a')">x</div>
+    <div class="titolo2">GIOCHI</div>
+    <div class="descrizione">Scopri tutti i giochi che abbiamo preparto per te, da svolgere da solo o per gareggiare con i tuoi amici </div>
+    <div id="giochi" class="avanti">
     <a href="gsap_video.html">VAI</a>
-    </button>
+    </div>
 
 </div>
 <div id="b" class="box helen2">
 
-    <button class="indietro" onclick="flip('b')">x</button>
+    <div class="indietro" onclick="flip('b')">x</div>
     <div class="titolo2">TITOLO</div>
     <div class="descrizione">Descrizione</div>
-    <button id="cruciverba" class="avanti" onclick="saluta(this.id)">
+    <div id="cruciverba" class="avanti">
     <a href="#">VAI</a>
-    </button>
+    </div>
     
 </div>
 <div id="c" class="box bob2">
     
-    <button class="indietro" onclick="flip('c')">x</button>
-    <div class="titolo2">TITOLO</div>
-    <div class="descrizione">Descrizione</div>
-    <button id="scenette" class="avanti" onclick="saluta(this.id)">
+    <div class="indietro" onclick="flip('c')">x</div>
+    <div class="titolo2">VIDEO</div>
+    <div class="descrizione">Guarda le avventure dei tuoi eroi interpetate dagli animatori</div>
+    <div id="scenette" class="avanti">
     <a href="gsap_video.html">VAI</a>
-    </button>
+    </div>
     
 </div>
 <div id="d" class="box violet2">
     
-    <button class="indietro" onclick="flip('d')">x</button>
-    <div class="titolo2">TITOLO</div>
-    <div class="descrizione">Descrizione</div>
-    <button id="bans" class="avanti" onclick="saluta(this.id)">
-    <a href="#">VAI</a>
-    </button>
+    <div class="indietro" onclick="flip('d')">x</div>
+    <div class="titolo2">BALLI</div>
+    <div class="descrizione">Balla con noi! Guarda i video che abbiamo preparato per te e segui il ritmo!</div>
+    <div id="bans" class="avanti">
+    <a href="balli_gsap.html">VAI</a>
+    </div>
     
 </div>
 <div id="e" class="box jack2">
 
-    <button class="indietro" onclick="flip('e')">x</button>
-    <div class="titolo2">TITOLO</div>
-    <div class="descrizione">Descrizione</div>
-    <button id="disegni" class="avanti" onclick="saluta(this.id)">
+    <div class="indietro" onclick="flip('e')">x</div>
+    <div class="titolo2">DISEGNI</div>
+    <div class="descrizione">Scegli, stampa e colora i disegni dei tuoi personaggi preferiti</div>
+    <div id="disegni" class="avanti">
     <a href="slider_gsap.html">VAI</a>
-    </button>
+    </div>
     
 </div>
 
@@ -91,9 +95,18 @@
 <footer>
 <script>
 
-var tl = gsap.timeline({});
 
-tl.from(".flash", {duration: 1.2, ease:"bounce", y: 1000})
+let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#cards",
+      start: "top 75%", 
+      end: "bottom 25%", 
+    }
+  });
+
+//var tl = gsap.timeline({});
+tl.addLabel("start")
+ .from(".flash", {duration: 1.2, ease:"bounce", y: 1000})
  .from(".helen", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
  .from(".bob", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
  .from(".violet", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
@@ -104,10 +117,6 @@ function flip(scelta){
 var t2 = gsap.timeline({});
 t2.to("#"+scelta, {duration:1, rotationY: "+=180"});
 
-}
-
-function saluta(parametro){
-alert(parametro);
 }
 
 </script>
