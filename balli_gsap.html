@@ -1,0 +1,197 @@
+<html>
+
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="balli_stile.css">
+
+<title>
+</title>
+
+</head>
+
+<body>
+
+<section id="header">
+
+<div id="titolino">Parrocchia Madonna di Fatima</div>
+<div id="titolo">ESTATE RAGAZZI 2021</div>
+<a href="gsap prova.html" id="logo"></a>
+
+</section>
+
+<section class="categoria">
+        <div id="pagina">BALLI</div>
+        
+        <div id="storia">
+        
+        </div>
+    </section>
+
+<section class="elenco">
+
+   
+    <section class="singolo">
+   
+        <div id="capitolo1" class="contenitore">
+            <div class="capitolo">TITOLO
+    
+                <div id="cap1" class="esci" value="false" onclick="apri('A', this.id, 0)"></div>
+    
+            <div id="AWrapper" class="slideshow-container">
+                <div class="mySlides1">
+                    <video src="#">
+                </div>
+
+                <div class="mySlides1">
+                    <video src="#">
+                </div>
+
+                <div class="mySlides1">
+                    <video src="#">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+    
+            </div>
+            
+        </div>
+     
+    </section>
+    
+    <section class="singolo">
+   
+        <div id="capitolo2" class="contenitore">
+            <div class="capitolo">TITOLO
+    
+                <div id="cap2" class="esci" value="false" onclick="apri('B', this.id, 1)"></div>
+    
+                <div id="BWrapper" class="slideshow-container">
+                    <div class="mySlides2">
+                        <video src="#">
+                    </div>
+
+                    <div class="mySlides2">
+                        <video src="#">
+                    </div>
+
+                    <div class="mySlides2">
+                        <video src="#">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+    
+    <section class="singolo">
+   
+        <div id="capitolo3" class="contenitore">
+            <div class="capitolo">TITOLO
+                <div id="cap2" class="esci" value="false" onclick="apri('C', this.id, 2)"></div>
+    
+                <div id="CWrapper" class="slideshow-container">
+                    <div class="mySlides3">
+                        <video src="#">
+                    </div>
+
+                    <div class="mySlides3">
+                        <video src="#">
+                    </div>
+
+                    <div class="mySlides3">
+                        <video src="#">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+                
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+    
+</section>
+    
+
+<section id="footer"></section>
+
+</body>
+
+<section id="footer"></section>
+
+</body>
+
+
+<footer>
+<script>
+ 
+var attivo = [3];
+ 
+function apri(idImmagini, bottone, posizione){
+
+var valore = document.getElementById(bottone).getAttribute('value');
+var wrapper = idImmagini+"Wrapper";
+var altezzaI = "100%";
+var altezzaW = "30em";
+
+if(valore === "false"){
+    document.getElementById(bottone).setAttribute('value', "true");
+    attivo [posizione] = true;
+    showSlides(0, posizione);
+    var t2 = gsap.timeline({});
+    t2.to("#"+wrapper, {duration: 0.4, height: altezzaW, display:"block"});
+    
+}
+else {
+    document.getElementById(bottone).setAttribute('value', "false");
+    attivo [posizione] = false;
+    var t2 = gsap.timeline({});
+    t2.to("#"+wrapper, {duration: 0.4, height:0, display:"none"});
+      
+}
+
+};
+
+var slideIndex = [1,2];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"];
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < x.length; i++) {
+  if(attivo[i]===true){
+     x[slideIndex[no]-1].style.display = "inline-block"; 
+     }
+  }
+   
+}
+</script>
+
+</footer>
+
+</html>

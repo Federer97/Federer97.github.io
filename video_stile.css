@@ -1,0 +1,471 @@
+@media only screen and (min-width: 1024px){
+
+body{
+background-color:red; 
+}
+
+#header{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 35%;
+    background-color: black;
+    border-radius: 0 0 100em 100em;
+}
+
+#titolino{
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 10%;
+    overflow: hidden;
+    text-align: center;
+    color: red;
+    text-shadow: 0px 1px orange;
+    letter-spacing: 6;
+}
+
+#titolo{
+position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    height: 50%;
+    overflow: hidden;
+    text-align: center;
+    color:red;
+    text-shadow: 0px 2px orange;
+    font-size: 5em;
+    font-family: "Oswald", sans-serif;
+}
+
+#logo{
+position:absolute;
+color:white;
+top:18%;
+left:5%;
+width:7%;
+height:30%;
+overflow:hidden;
+background-color:black;
+background-image: url("simbolo.png");
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+}
+
+#header::after{
+    width: 80%;
+    position: absolute;
+    top: 120%;
+    height: 1%;
+    content: "";
+    left: 10%;
+    background-color: black;
+}
+
+
+.categoria{
+color:black;
+font-family: "Oswald", sans-serif;
+    font-size: 5em;
+    letter-spacing: 10;
+position:absolute;
+top:50%;
+width:80%;
+left:5%;
+height:20%
+}
+
+#pagina{
+   width: 40%;
+   overflow: hidden;
+   text-shadow: 0 1px lightslategrey;
+}
+
+#storia{
+    width: 60%;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.Twin{
+  background-image: url("sfondi_png/palazzo1.png");  
+  width:5%;
+  height:90%;
+  display:inline-block;
+  background-position:center;
+  background-size:cover;
+  z-index:1;
+  position:absolute;
+  left:0;
+}
+
+.Tour{
+  background-image: url("sfondi_png/palazzo2.png"); 
+  width:5%;
+  display:inline-block; 
+  height:75%;
+  background-position:center;
+    background-size:cover;
+    z-index:1;
+    position:absolute;
+  left:7%;
+}
+
+.pine{
+  background-image: url("sfondi_png/palazzo3.png");  
+  width:5%;
+  display:inline-block;
+  height:85%;
+  background-position:center;
+    background-size:cover;
+    z-index:1;
+    position:absolute;
+  left:14%;
+}
+
+.car{
+    background-image: url("sfondi_png/car.png");  
+  width:15%;
+  display:inline-block;
+  height:50%;
+  background-position:center;
+    background-size:cover;
+    z-index:5;
+    position:absolute;
+  bottom:5%;
+  left:35%;
+}
+
+.Twin2{
+  background-image: url("sfondi_png/palazzo1.png");  
+  width:5%;
+  height:90%;
+  display:inline-block;
+  background-position:center;
+  background-size:cover;
+  z-index:1;
+  position:absolute;
+  left:50%;
+}
+
+.Tour2{
+  background-image: url("sfondi_png/palazzo2.png"); 
+  width:5%;
+  display:inline-block; 
+  height:75%;
+  background-position:center;
+    background-size:cover;
+    z-index:1;
+    position:absolute;
+  left:57%;
+}
+
+.pine2{
+  background-image: url("sfondi_png/palazzo3.png");  
+  width:5%;
+  display:inline-block;
+  height:85%;
+  background-position:center;
+    background-size:cover;
+    z-index:1;
+    position:absolute;
+  left:64%;;
+}
+
+.elenco{
+position:absolute;
+color:white;
+top:75%;
+left:5%;
+width:90%;
+/*background-color:gray;*/
+}
+
+.singolo{
+  width:100%;
+  display:inline-block;
+}
+
+.contenitore{
+  width:70%;
+  overflow:hidden;
+  background-color:yellow;
+  border: 0.2em solid black;
+  display: inline-block;
+}
+
+.capitolo{
+color:black;
+font-size: 1em;
+font-family: "Krona One", sans-serif;
+    
+}
+
+.esci{
+ width:5%;
+ height:2%;
+ padding:0;
+ margin-top:0;
+ margin-right:5%;
+ float:right;
+ background-color:blue;
+ overflow:none;
+}
+
+.trama{
+ margin-top:1%;   
+ margin-left: 1%;
+ margin-right: 1%;
+ padding:0;
+ height:0;
+ display:none;
+ background-color:yellow;
+ overflow:none;
+ background-color:blue;
+}
+
+.video{
+ margin-top:1%;   
+ margin-left: 1%;
+ margin-right: 1%;
+ margin-bottom:1%;
+ padding:0;
+ height:0;
+ display:none;
+ overflow:hidden;
+ background-color:orange;
+ width:98%;
+}
+
+.quadro{
+    width: 25%;
+    background-color: blue;
+    margin-top: 3%;
+    float:right;
+    display: none;
+}
+
+div#capitolo2{   
+  margin-top:5%;
+  float:right;  
+}
+
+#immagine2{
+    margin-top:8%;
+    float:left;
+}
+
+div#capitolo3{
+  margin-top:5%;  
+}
+
+#immagine3{
+  margin-top:8%;
+}
+
+#footer{
+position:absolute;
+color:white;
+left:0%;
+top:200%;
+height:30%;
+width:100%;
+text-align:center;
+overflow:hidden;
+background-color:black;
+/*background-image:logo*/  
+}
+
+}
+
+@media only screen and (max-width: 767px){
+
+body{
+background-color:red; 
+}
+
+#header{
+ position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 35%;
+    background-color: black;
+    border-radius: 0 0 100em 100em;
+}
+
+#header::after{
+    width: 80%;
+    position: absolute;
+    top: 120%;
+    height: 1%;
+    content: "";
+    left: 10%;
+    background-color: black;
+}
+
+#titolino{
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 10%;
+    overflow: hidden;
+    text-align: center;
+    color: red;
+    text-shadow: 0px 1px orange;
+}
+
+#titolo{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    height: 50%;
+    overflow: hidden;
+    text-align: center;
+    color:red;
+    text-shadow: 0px 2px orange;
+    font-size: 2em;
+    font-family: "Oswald", sans-serif;
+}
+
+#logo{
+position:absolute;
+color:white;
+top:18%;
+left:5%;
+width:7%;
+height:30%;
+overflow:hidden;
+background-image: url("simbolo.png");
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+cursor: pointer;
+}
+
+.elenco{
+position:absolute;
+color:white;
+top:75%;
+left:5%;
+width:90%;
+/*background-color:gray;*/
+}
+
+.categoria{
+color:black;
+font-family: "Oswald", sans-serif;
+    font-size: 3em;
+    letter-spacing: 10;
+position:absolute;
+top:50%;
+width:80%;
+left:5%;
+}
+
+#pagina{
+   width: 100%;
+   overflow: hidden;
+   text-shadow: 0 1px lightslategrey;
+}
+
+#storia{
+    width: 70%;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top:0;
+    display:none;
+}
+
+.singolo{
+  width:100%;
+  display:inline-block;
+}
+
+.contenitore{
+  width:100%;
+  overflow:hidden;
+  background-color:yellow;
+  border: 0.2em solid black;
+  display: inline-block;
+}
+
+.capitolo{
+color:black;
+font-size: 1em;
+font-family: "Krona One", sans-serif;
+}
+
+.esci{
+ width:5%;
+ height:2%;
+ padding:0;
+ margin-top:0;
+ margin-right:5%;
+ float:right;
+ background-color:blue;
+ overflow:none;
+}
+
+.trama{
+ margin-top:1%;   
+ margin-left: 1%;
+ margin-right: 1%;
+ padding:0;
+ height:0;
+ display:none;
+ background-color:yellow;
+ overflow:none;
+ background-color:blue;
+}
+
+.video{
+ margin-top:1%;   
+ margin-left: 1%;
+ margin-right: 1%;
+ margin-bottom:1%;
+ padding:0;
+ height:0;
+ display:none;
+ overflow:hidden;
+ background-color:orange;
+ width:98%;
+}
+
+div#capitolo2{
+    margin-top:5%;
+}
+
+div#capitolo3{
+  margin-top:5%;  
+}
+
+#footer{
+position:absolute;
+color:white;
+left:0%;
+top:200%;
+height:30%;
+width:100%;
+text-align:center;
+overflow:hidden;
+background-color:black;
+/*background-image:logo*/  
+}
+
+}

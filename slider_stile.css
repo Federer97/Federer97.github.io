@@ -1,0 +1,559 @@
+@media only screen and (min-width: 1024px){
+
+body{
+background-color:red;
+}
+
+#header{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 35%;
+    background-color: black;
+    border-radius: 0 0 100em 100em;
+}
+
+#titolino{
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 10%;
+    overflow: hidden;
+    text-align: center;
+    color: red;
+    text-shadow: 0px 1px orange;
+    letter-spacing: 6;
+}
+
+#titolo{
+position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    height: 40%;
+    overflow: hidden;
+    text-align: center;
+    color:red;
+    text-shadow: 0px 2px orange;
+    font-size: 5em;
+    font-family: "Oswald", sans-serif;
+}
+
+#logo{
+position:absolute;
+color:white;
+top:18%;
+left:5%;
+width:7%;
+height:30%;
+overflow:hidden;
+background-color:black;
+background-image: url("simbolo.png");
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+}
+
+#header::after{
+    width: 80%;
+    position: absolute;
+    top: 120%;
+    height: 1%;
+    content: "";
+    left: 10%;
+    background-color: black;
+}
+
+
+.categoria{
+color:black;
+font-family: "Oswald", sans-serif;
+    font-size: 5em;
+    letter-spacing: 10;
+position:absolute;
+top:50%;
+width:80%;
+left:5%;
+height:20%
+}
+
+#pagina{
+   width: 40%;
+   overflow: hidden;
+   text-shadow: 0 1px lightslategrey;
+}
+
+#storia{
+    width: 60%;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.Twin{
+  background-image: url("sfondi_png/palma1.png");  
+  width:15%;
+  height:100%;
+  display:inline-block;
+  background-position:center;
+  background-size:cover;
+  z-index:1;
+  position:absolute;
+  left:0;
+}
+
+.Tour{
+  background-image: url("sfondi_png/palma2.png"); 
+  width:20%;
+  display:inline-block; 
+  height:80%;
+  background-position:center;
+    background-size:cover;
+    z-index:1;
+    position:absolute;
+    bottom:0;
+  left:7%;
+}
+
+.pine{
+  background-image: url("sfondi_png/palma3.png");  
+  width:15%;
+  display:inline-block;
+  height:100%;
+  background-position:center;
+    background-size:cover;
+    z-index:1;
+    position:absolute;
+  left:14%;
+}
+
+.car{
+    background-image: url("sfondi_png/car.png");  
+  width:15%;
+  display:inline-block;
+  height:50%;
+  background-position:center;
+    background-size:cover;
+    z-index:5;
+    position:absolute;
+    bottom:0;
+  left:35%;
+}
+
+.Twin2{
+  background-image: url("sfondi_png/palma1.png");  
+  width:15%;
+  height:100%;
+  display:inline-block;
+  background-position:center;
+  background-size:cover;
+  z-index:1;
+  position:absolute;
+  left:50%;
+}
+
+.Tour2{
+  background-image: url("sfondi_png/palma2.png"); 
+  width:20%;
+  display:inline-block; 
+  height:80%;
+  background-position:center;
+    background-size:cover;
+    z-index:1;
+    position:absolute;
+  left:57%;
+  bottom:0;
+}
+
+.pine2{
+  background-image: url("sfondi_png/palma3.png");  
+  width:15%;
+  display:inline-block;
+  height:100%;
+  background-position:center;
+    background-size:cover;
+    z-index:1;
+    position:absolute;
+  left:64%;
+}
+
+.elenco{
+position:absolute;
+color:white;
+top:75%;
+left:5%;
+width:90%;
+/*background-color:gray;*/
+}
+
+.singolo{
+  width:100%;
+  display:inline-block;
+  margin-top: 2%;
+}
+
+.contenitore{
+  width:100%;
+  overflow:hidden;
+  background-color:black;
+  border: 0.1em solid yellow;
+  display: inline-block;
+}
+
+.capitolo{
+    color:red;
+    font-size: 1.5em;
+    font-family: "Krona One", sans-serif;
+}
+
+.esci{
+    width: 5%;
+    padding: 9;
+    margin-top: 0.5%;
+    margin-right: 5%;
+    float: right;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.wrapper{
+ display:none;
+ width: 80%;
+ position: relative;
+ margin: auto;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides1, .mySlides2, .mySlides3{
+  display: none;
+}
+
+img{
+      height: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  font-weight: bold;
+  font-size: 5em;
+  left:0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  left: 90%
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: red;
+  color:black;
+  width:max-content;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.immagine{
+ left: 100%;
+ width:80%;
+ height:100%;
+ background-color:yellow;
+ overflow: hidden;
+ background-color:blue;
+}
+
+
+#footer{
+position:absolute;
+color:white;
+left:0%;
+top:200%;
+height:30%;
+width:100%;
+text-align:center;
+overflow:hidden;
+background-color:black;
+/*background-image:logo*/  
+}
+
+}
+ 
+@media only screen and (max-width: 767px){
+
+body{
+background-color:red;
+}
+
+#header{
+ position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 35%;
+    background-color: black;
+    border-radius: 0 0 100em 100em;
+}
+
+#header::after{
+    width: 80%;
+    position: absolute;
+    top: 120%;
+    height: 1%;
+    content: "";
+    left: 10%;
+    background-color: black;
+}
+
+#titolino{
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 10%;
+    overflow: hidden;
+    text-align: center;
+    color: red;
+    text-shadow: 0px 1px orange;
+}
+
+#titolo{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    height: 50%;
+    overflow: hidden;
+    text-align: center;
+    color:red;
+    text-shadow: 0px 2px orange;
+    font-size: 2em;
+    font-family: "Oswald", sans-serif;
+}
+
+#logo{
+position:absolute;
+color:white;
+top:18%;
+left:5%;
+width:7%;
+height:30%;
+overflow:hidden;
+background-image: url("simbolo.png");
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+cursor: pointer;
+}
+
+.elenco{
+position:absolute;
+color:white;
+top:75%;
+left:5%;
+width:90%;
+/*background-color:gray;*/
+}
+
+.singolo{
+  width:100%;
+  display:inline-block;
+  margin-top: 2%;
+}
+
+.categoria{
+color:black;
+font-family: "Oswald", sans-serif;
+    font-size: 3em;
+    letter-spacing: 10;
+position:absolute;
+top:50%;
+width:80%;
+left:5%;
+}
+
+.contenitore{
+  width:100%;
+  overflow:hidden;
+  background-color:black;
+  border: 0.1em solid yellow;
+  display: inline-block;
+}
+
+.capitolo{
+    color:red;
+    font-size: 1.5em;
+    font-family: "Krona One", sans-serif;
+}
+
+.esci{
+    width: 5%;
+    padding: 9;
+    margin-top: 0.5%;
+    margin-right: 5%;
+    float: right;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.wrapper{
+ display:none;
+ width: 80%;
+ position: relative;
+ margin: auto;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides1, .mySlides2, .mySlides3{
+  display: none;
+}
+
+img{
+      height: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  font-weight: bold;
+  font-size: 5em;
+  left:0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  left: 90%
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: red;
+  color:black;
+  width:max-content;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.immagine{
+ left: 100%;
+ width:80%;
+ height:100%;
+ background-color:yellow;
+ overflow: hidden;
+ background-color:blue;
+}
+
+
+#footer{
+position:absolute;
+color:white;
+left:0%;
+top:200%;
+height:30%;
+width:100%;
+text-align:center;
+overflow:hidden;
+background-color:black;
+/*background-image:logo*/  
+}
+
+}
+
+
