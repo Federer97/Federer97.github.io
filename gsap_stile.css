@@ -1117,31 +1117,32 @@ li#liDisegno{
 }
 
 .titolo2{
-  position:absolute;
-  top:5%;
-  left:10%;
-  width:80%;
-  height:15%;
-  overflow:hidden;
-  text-align:center;
-  font-family: "Oswald", sans-serif;
-  font-size: 1em;
-  writing-mode:horizontal-tb;
-  letter-spacing: 0;
+      position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 15%;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.7em;
+    writing-mode: horizontal-tb;
+    letter-spacing: 0;
+    line-height: 1em;
 }
 
 .descrizione{
-  position:absolute;
-  top:25%;
-  left:10%;
-  width:80%;
-  height:60%;
-  overflow:hidden;
-  text-align:center;
-  font-family: "Oswald", sans-serif;
-  font-size: 0.5em;
-  writing-mode:horizontal-tb;
-  letter-spacing: 0;
+  position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.3em;
+    writing-mode: horizontal-tb;
+    letter-spacing: 0;
 }
 
 .avanti{
