@@ -1,0 +1,452 @@
+<html>
+
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="balli_stile.css">
+
+<title>
+</title>
+
+</head>
+
+<body onload="carica()">
+
+<section id="loader"></section>
+<section id="vista">
+
+<section id="header">
+
+<div id="titolino">Parrocchia Madonna di Fatima</div>
+<div id="titolo">ESTATE RAGAZZI 2021</div>
+<a href="gsap prova.html" id="logo"></a>
+
+</section>
+
+ <section class="categoria">
+        <div id="pagina">BALLI</div>
+        
+        <div id="storia">
+        
+        <div class="Twin"></div>
+        <div class="Tour"></div>
+        <div class="pine"></div>
+        
+        <div class="car"></div>
+        
+        <div class="Twin2"></div>
+        <div class="Tour2"></div>
+        <div class="pine2"></div>
+        
+        </div>
+        
+    </section>
+
+<section class="elenco">
+
+    
+    <section class="singolo">
+   
+        <div id="capitolo1" class="contenitore">
+            <div class="capitolo">PESCIOLINO DANCE
+    
+                <button id="cap1" class="esci" value="false" onclick="apri('aT', 'aV', this.id, 'immagine1')">v</button>
+    
+            </div>
+    
+            <video id='aV' class="video c1"></video>
+            
+            
+        </div>
+
+        <div id="immagine1" class="quadro"></div>
+     
+    </section>
+
+    <section class="singolo"> 
+        <div id="capitolo2" class="contenitore">
+            <div class="capitolo">OLD POP IN AOK
+    
+                <button id="cap2" class="esci" value="false" onclick="apri('bT', 'bV', this.id, 'immagine2')">v</button>
+    
+            </div>
+    
+            <video id='bV' class="video c2"></video>
+        </div>
+
+        <div id="immagine2" class="quadro"></div>
+    
+    </section>
+    
+    <section class="singolo">
+   
+        <div id="capitolo3" class="contenitore">
+            <div class="capitolo">TWERKO SULLA TEKNO
+    
+                <button id="cap3" class="esci" value="false" onclick="apri('cT', 'cV', this.id, 'immagine3')">v</button>
+    
+            </div>
+    
+            <video id='cV' class="video c3"></video>
+            
+            
+        </div>
+
+        <div id="immagine3" class="quadro"></div>
+     
+    </section>
+    
+    <section class="singolo" style="display:none"> 
+        <div id="capitolo4" class="contenitore">
+            <div class="capitolo">CAPITOLO 4
+    
+                <button id="cap4" class="esci" value="false" onclick="apri('dT', 'dV', this.id, 'immagine4')">v</button>
+    
+            </div>
+    
+            <video id='dV' class="video c4"></video>
+        </div>
+
+        <div id="immagine4" class="quadro"></div>
+    
+    </section>
+    
+    <section class="singolo" style="display:none">
+   
+        <div id="capitolo5" class="contenitore">
+            <div class="capitolo">CAPITOLO 5
+    
+                <button id="cap5" class="esci" value="false" onclick="apri('eT', 'eV', this.id, 'immagine5')">v</button>
+    
+            </div>
+    
+            <video id='eV' class="video c5"></video>
+            
+            
+        </div>
+
+        <div id="immagine5" class="quadro"></div>
+     
+    </section>
+    
+    <section class="singolo" style="display:none"> 
+        <div id="capitolo6" class="contenitore">
+            <div class="capitolo">CAPITOLO 6
+    
+                <button id="cap6" class="esci" value="false" onclick="apri('fT', 'fV', this.id, 'immagine6')">v</button>
+    
+            </div>
+    
+            <video id='fV' class="video c6"></video>
+        </div>
+
+        <div id="immagine6" class="quadro"></div>
+    
+    </section>
+    
+    <section class="singolo" style="display:none">
+   
+        <div id="capitolo7" class="contenitore">
+            <div class="capitolo">CAPITOLO 7
+    
+                <button id="cap7" class="esci" value="false" onclick="apri('gT', 'gV', this.id, 'immagine7')">v</button>
+    
+            </div>
+    
+            <video id='gV' class="video c7"></video>
+            
+            
+        </div>
+
+        <div id="immagine7" class="quadro"></div>
+     
+    </section>
+    
+    <section class="singolo" style="display:none"> 
+        <div id="capitolo8" class="contenitore">
+            <div class="capitolo">CAPITOLO 8
+    
+                <button id="cap8" class="esci" value="false" onclick="apri('hT', 'hV', this.id, 'immagine8')">v</button>
+    
+            </div>
+    
+            <video id='hV' class="video c8"></video>
+        </div>
+
+        <div id="immagine8" class="quadro"></div>
+    
+    </section>
+    
+    <section class="singolo" style="display:none">
+   
+        <div id="capitolo9" class="contenitore">
+            <div class="capitolo">CAPITOLO 9
+    
+                <button id="cap9" class="esci" value="false" onclick="apri('iT', 'iV', this.id, 'immagine9')">v</button>
+    
+            </div>
+    
+            <video id='iV' class="video c9"></video>
+            
+            
+        </div>
+
+        <div id="immagine9" class="quadro"></div>
+     
+    </section>
+    
+    <section class="singolo" style="display:none"> 
+        <div id="capitolo10" class="contenitore">
+            <div class="capitolo">CAPITOLO 10
+    
+                <button id="cap10" class="esci" value="false" onclick="apri('lT', 'lV', this.id, 'immagine10')">v</button>
+    
+            </div>
+    
+            <video id='lV' class="video c10"></video>
+        </div>
+
+        <div id="immagine10" class="quadro"></div>
+    
+    </section>
+    
+    <section class="singolo" style="display:none">
+   
+        <div id="capitolo11" class="contenitore">
+            <div class="capitolo">CAPITOLO 11
+    
+                <button id="cap11" class="esci" value="false" onclick="apri('mT', 'mV', this.id, 'immagine11')">v</button>
+    
+            </div>
+    
+            <video id='mV' class="video c11"></video>
+            
+            
+        </div>
+
+        <div id="immagine11" class="quadro"></div>
+     
+    </section>
+    
+    <section class="singolo" style="display:none"> 
+        <div id="capitolo12" class="contenitore">
+            <div class="capitolo">CAPITOLO 12
+    
+                <button id="cap12" class="esci" value="false" onclick="apri('nT', 'nV', this.id, 'immagine12')">v</button>
+    
+            </div>
+    
+            <video id='nV' class="video c12"></video>
+        </div>
+
+        <div id="immagine12" class="quadro"></div>
+    
+    </section>
+    
+    <section class="singolo" style="display:none">
+   
+        <div id="capitolo13" class="contenitore">
+            <div class="capitolo">CAPITOLO 13
+    
+                <button id="cap13" class="esci" value="false" onclick="apri('oT', 'oV', this.id, 'immagine13')">v</button>
+    
+            </div>
+    
+            <video id='oV' class="video c13"></video>
+            
+            
+        </div>
+
+        <div id="immagine13" class="quadro"></div>
+     
+    </section>
+    
+    <section class="singolo" style="display:none"> 
+        <div id="capitolo14" class="contenitore">
+            <div class="capitolo">CAPITOLO 14
+    
+                <button id="cap14" class="esci" value="false" onclick="apri('pT', 'pV', this.id, 'immagine14')">v</button>
+    
+            </div>
+    
+            <video id='pV' class="video c14"></video>
+        </div>
+
+        <div id="immagine14" class="quadro"></div>
+    
+    </section>
+    
+    <section class="singolo" style="display:none">
+   
+        <div id="capitolo15" class="contenitore">
+            <div class="capitolo">CAPITOLO 15
+    
+                <button id="cap15" class="esci" value="false" onclick="apri('rT', 'rV', this.id, 'immagine15')">v</button>
+    
+            </div>
+    
+            <video id='rV' class="video c15"></video>
+            
+            
+        </div>
+
+        <div id="immagine15" class="quadro"></div>
+     
+    </section>
+    
+    <section class="singolo" style="display:none"> 
+        <div id="capitolo16" class="contenitore">
+            <div class="capitolo">CAPITOLO 16
+    
+                <button id="cap16" class="esci" value="false" onclick="apri('sT', 'sV', this.id, 'immagine16')">v</button>
+    
+            </div>
+
+            <video id='sV' class="video c16"></video>
+        </div>
+
+        <div id="immagine16" class="quadro"></div>
+    
+    </section>
+    
+</section>
+
+<section id="footer">
+
+<div class="colonna1">
+<ul>
+<li>Ufficio parrocchiale: Via Citta di Alba 32, Pinerolo (TO)</li>
+<li>Indirizzo e-mail parrocchia: parrocchia.madonnafatima@gmail.com</li>
+</ul>
+</div>
+
+<div class="colonna2">
+<ul>
+<li>Telefono ufficio: 0123 456789</li>
+<li>Indirizzo e-mail animatori: gruppogiovani.maddonafatima@gmail.com</li>
+</ul>
+</div>
+
+</section>
+
+</section>
+
+</body>
+
+<footer>
+<script>
+
+var footerSize=150; //350 a dimensione totale
+var wrapperFooterSize;
+
+var tx = gsap.timeline({});
+
+tx.from(".Twin", {duration: 1, y:100})
+  .from(".Tour", {duration: 1, y:100}, "-=0.9")
+  .from(".pine", {duration: 1, y:100}, "-=0.9")
+  .from(".Twin2", {duration: 1, y:100}, "-=0.9")
+  .from(".Tour2", {duration: 1, y:100}, "-=0.9")
+  .from(".pine2", {duration: 1, y:100}, "-=0.9")
+  .from(".car", {duration: 2, x:1000});
+tx.to(".car", {duration: 2, x: -1000}, "+=5");
+
+function carica(){
+    setTimeout(function(){
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("vista").style.display = "inline"; }, 1000);
+}  
+ 
+var attivo = true;
+var mobile = false;
+var tablet = false;
+var dimensione = window.matchMedia("(max-width: 600px)"); 
+var dimensione2 = window.matchMedia("(max-width: 1023px)"); 
+
+
+function controlloMediaQuery() {
+  if (dimensione.matches) { // If media query matches
+    mobile = true;
+  } else if (dimensione2.matches){
+    mobile = false;
+    tablet = true;
+  }
+  else{
+    mobile = false;
+    tablet = false;
+  }
+} 
+ 
+function apri(idTrama, idVideo, bottone, numImmagine){
+
+var valore = document.getElementById(bottone).getAttribute('value');
+var altezzaI = "100%";
+var altezzaW;
+controlloMediaQuery();
+if(mobile){
+  altezzaW = "12em";
+  }
+  else if(tablet){
+    altezzaW= "20em";
+    }
+  else{altezzaW = "25em";}
+
+
+if(valore === "false"){
+    document.getElementById(bottone).setAttribute('value', "true");
+    document.getElementById(bottone).innerHTML = "^";
+    var t2 = gsap.timeline({});
+      
+
+    t2.to("#"+idVideo, {duration: 0.4, height: altezzaW, display:"block"}, "-=0.1")
+    
+    if(!mobile){
+        t2.to("#"+numImmagine, {duration: 0.4, height: altezzaW, display:"inline-block"}, "-=0.5");
+    }
+      
+    aggiustaFooter();
+}
+else {
+    document.getElementById(bottone).setAttribute('value', "false");
+    document.getElementById(bottone).innerHTML = "v";
+    var t2 = gsap.timeline({});
+    t2.to("#"+idVideo, {duration: 0.4, height:0, display:"none"})
+      .to("#"+numImmagine, {duration: 0.4, height:0, display:"none"}, "-=0.4")
+    riduciFooter();  
+}
+
+}
+
+function aggiustaFooter(){
+if(attivo){
+footerSize = footerSize + 90; 
+wrapperFooterSize = footerSize+"%";
+document.getElementById("footer").style.top = wrapperFooterSize;
+}
+else{
+footerSize = footerSize + 45; 
+wrapperFooterSize = footerSize+"%";
+document.getElementById("footer").style.top = wrapperFooterSize;
+}
+}
+
+function riduciFooter(){
+if(attivo){
+footerSize = footerSize - 90; 
+wrapperFooterSize = footerSize+"%";
+document.getElementById("footer").style.top = wrapperFooterSize;
+}
+else{
+footerSize = footerSize - 45; 
+wrapperFooterSize = footerSize+"%";
+document.getElementById("footer").style.top = wrapperFooterSize;
+}
+}
+
+</script>
+</footer>
+
+</html>

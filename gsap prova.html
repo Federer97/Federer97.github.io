@@ -1,0 +1,218 @@
+<html>
+
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="gsap_stile.css">
+<link rel="stylesheet" href="style_essential.css">
+
+<title>
+</title>
+
+</head>
+
+<body>
+
+<section id="header">
+
+<div id="titolino">Parrocchia Madonna di Fatima</div>
+<div id="titolo">ESTATE RAGAZZI 2021</div>
+
+<div id="logo">
+        <ul>
+		<li><a></a>
+			<ul>
+				<li><a href="gsap prova.html">HOME</a></li>
+				<li><a href="avvisi.html">AVVISI</a></li>
+				<li><a>INFO</a>
+					<ul>
+						<li><a href="info.html">TIPO 1</a></li>
+						<li><a>TIPO 2</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+</section>
+
+<div id="logo2" onclick="mostra()"></div>
+
+<div id="menuMobile">
+
+    <div class="testoMobile"><a class="linkMobile" href="gsap prova.html">HOME</a></div>
+    <div class="testoMobile"><a class="linkMobile" href="avvisi.html">AVVISI</a></div>
+    <div class="testoMobile"><a class="linkMobile" href="info.html">INFO</a></div>
+
+</div>
+
+<div id="chiudiMobile" onclick="nascondi()">X</div>
+
+<section id="novita">
+
+    <div class="newTitolo">NOVITA'</div>
+
+    <div id="novitaColonna">
+    <ul class="aggiunte">
+        <li id="liVideo">Aggiunto nuovo video</li>
+        <li id="liDisegno">Nuovi disegni disponibili</li>
+        <li id="liGioco">Gioco in scadenza il 22/06/20</li>
+    </ul>
+    </div>
+    
+    <div id="novitaFoto"></div>    
+</section>
+
+<section id="cards">
+
+<div id="a" class="box flash" onclick="flip(this.id)">GIOCHI<div class="foto uno"></div></div>
+<div id="b" class="box helen" onclick="flip(this.id)">ENIGMI<div class="foto due"></div></div>
+<div id="c" class="box bob" onclick="flip(this.id)">VIDEO<div class="foto tre"></div></div>
+<div id="d" class="box violet" onclick="flip(this.id)">BALLI<div class="foto quattro"></div></div>
+<div id="e" class="box jack" onclick="flip(this.id)">DISEGNI<div class="foto cinque"></div></div>
+
+<div id="a" class="box flash2" >
+
+    <div class="indietro" onclick="flip('a')">x</div>
+    <div class="titolo2">GIOCHI</div>
+    <div class="descrizione">Scopri tutti i giochi che abbiamo preparto per te, da svolgere da solo o per gareggiare con i tuoi amici </div>
+    <button id="giochi" class="avanti">
+    <a class="si" href="giochi_gsap.html">VAI</a>
+    </button>
+
+</div>
+<div id="b" class="box helen2">
+
+    <div class="indietro" onclick="flip('b')">x</div>
+    <div class="titolo2">ENIGMI</div>
+    <div class="descrizione">Riuscirai a risolvere gli indovinelli? Completerai i giochi enigmistici? Mettiti alla prova!</div>
+    <button id="cruciverba" class="avanti" onclick="window.location.href='xxxxxx.html'">
+    <a class="si" href="#">VAI</a>
+    </button>
+    
+</div>
+<div id="c" class="box bob2">
+    
+    <div class="indietro" onclick="flip('c')">x</div>
+    <div class="titolo2">VIDEO</div>
+    <div class="descrizione">Guarda le avventure dei tuoi eroi interpetate dagli animatori</div>
+    <button id="scenette" class="avanti" onclick="window.location.href='gsap_video.html'">
+    <a class="si" href="gsap_video.html">VAI</a>
+    </button>
+    
+</div>
+<div id="d" class="box violet2">
+    
+    <div class="indietro" onclick="flip('d')">x</div>
+    <div class="titolo2">BALLI</div>
+    <div class="descrizione">Balla con noi! Guarda i video che abbiamo preparato per te e segui il ritmo!</div>
+    <button id="bans" class="avanti" onclick="window.location.href='balli_gsap.html'">
+    <a class="si" href="balli_gsap.html">VAI</a>
+    </button>
+    
+</div>
+<div id="e" class="box jack2">
+
+    <div class="indietro" onclick="flip('e')">x</div>
+    <div class="titolo2">DISEGNI</div>
+    <div class="descrizione">Scegli, stampa e colora i disegni dei tuoi personaggi preferiti</div>
+    <button id="disegni" class="avanti" onclick="window.location.href='slider_gsap.html'">
+    <a class="si" href="slider_gsap.html">VAI</a>
+    </button>
+    
+</div>
+
+</section>
+
+<section id="footer">
+
+<div class="colonna1">
+<ul>
+<li>Ufficio parrocchiale: Via Citta di Alba 32, Pinerolo (TO)</li>
+<li>Indirizzo e-mail parrocchia: parrocchia.madonnafatima@gmail.com</li>
+</ul>
+</div>
+
+<div class="colonna2">
+<ul>
+<li>Telefono ufficio: 0123 456789</li>
+<li>Indirizzo e-mail animatori: gruppogiovani.maddonafatima@gmail.com</li>
+</ul>
+</div>
+
+</section>
+
+
+
+</body>
+
+<footer>
+<script>
+
+let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#cards",
+      start: "top 75%", 
+      end: "bottom 25%", 
+    }
+  });
+
+//var tl = gsap.timeline({});
+tl.addLabel("start")
+ .from(".flash", {duration: 1.2, ease:"bounce", y: 1000})
+ .from(".helen", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
+ .from(".bob", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
+ .from(".violet", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9")
+ .from(".jack", {duration: 1.2, ease:"bounce", y: 1000}, "-=0.9");
+ 
+let t0 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#novita",
+      start: "top 75%", 
+      end: "bottom 25%", 
+    }
+  }); 
+  
+//var t0 = gsap.timeline({});
+t0.addLabel("start")
+ .from("#novita", {duration: 4, scale: 0.2, rotation: 3600});
+ 
+function flip(scelta){
+
+var t2 = gsap.timeline({});
+t2.to("#"+scelta, {duration:1, rotationY: "+=180"});
+
+}
+
+function mostra(){
+document.getElementById("menuMobile").style.display = "inline-block";
+document.getElementById("chiudiMobile").style.display = "inline-block";
+document.getElementById("cards").style.display = "none";
+document.getElementById("footer").style.display = "none";
+document.getElementById("novita").style.display = "none";
+document.getElementById("header").style.display = "none";
+document.getElementById("logo2").style.display = "none";
+document.body.style.backgroundColor = "black";
+}
+
+function nascondi(){
+document.getElementById("menuMobile").style.display = "none";
+document.getElementById("chiudiMobile").style.display = "none";
+document.getElementById("cards").style.display = "inline-block";
+document.getElementById("footer").style.display = "inline-block";
+document.getElementById("novita").style.display = "inline-block";
+document.getElementById("header").style.display = "inline-block";
+document.getElementById("logo2").style.display = "inline-block";
+document.body.style.backgroundColor = "red";
+}
+
+</script>
+</footer>
+
+</html>

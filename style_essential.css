@@ -1,0 +1,174 @@
+@media only screen and (min-width: 601px){
+
+#logo ul ul {
+	display: none; /* nasconde i sottomenu*/
+    height:unset;
+}
+
+#logo ul li:hover > ul {
+	display: block; /* riconverte a blocco i sottomenu quando il mouse si posiziona sopra una voce di menu agendo sul selettore figlio ul*/
+}
+
+#logo ul {
+	list-style: none; /* elimina i punti dalla lista*/
+	position: relative;/* posiziona il sotto menu relativamente al menu principale*/
+	display: inline-table; /* visualizza le voci di menu in orizzontale come se fossero una cella di tabella*/
+    background-image: url(menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:100%;
+    height:100%
+}
+
+
+
+/*
+nav ul:after {
+	content: ""; clear: both; display: block;
+	}*/
+	
+#logo ul li {
+	float: left;
+    width:100%;
+    height:100%;
+    
+}	
+		
+		#logo ul li a { /*stile del link del munu */
+		display: block;
+        color: black;
+        text-decoration: none;
+        background-color: #f3e5e5;
+        padding: 0;
+	}
+
+	#logo ul ul { /*stile del sotto menu*/
+		background: black; 
+		padding: 0;
+		position: absolute; /*posizione fissa del sottomenu relativamente al menu principale*/
+		top: 100%;/* 100% dal top del menu principale = lato basso (bottom)*/
+        left: 0;
+}
+
+#logo ul ul li {
+		float: none; 
+		position: relative; /*posizione di ogni singola voce del sottomenu == statica */ 
+	}
+
+#logo ul ul li a {
+			padding: 0;
+			color: black;
+            font-family: "Krona", sans-serif;
+            font-size: 1em;
+            text-align: center;
+            font-weight: 300;
+            font-style: oblique;
+            margin: 0.1em 0;
+            padding: 0.5em 0;
+		}	
+
+#logo ul ul li a:hover {
+	background: black;
+    color: red;
+        border: 1px groove red;
+			}
+			
+#logo ul ul ul {
+	position: absolute; /*posizione fissa del secondo sottomenu in riferimento al secondo che lo contiene spostato tutto a destra*/
+	left: 100%; 
+	top:0;
+}
+
+}
+
+
+@media only screen and (max-width: 600px){
+
+#logo ul ul {
+	display: none; /* nasconde i sottomenu*/
+    height:unset;
+}
+
+#logo ul li:hover > ul {
+	display: block; /* riconverte a blocco i sottomenu quando il mouse si posiziona sopra una voce di menu agendo sul selettore figlio ul*/
+}
+
+#logo ul {
+	list-style: none; /* elimina i punti dalla lista*/
+	position: relative;/* posiziona il sotto menu relativamente al menu principale*/
+	display: inline-table; /* visualizza le voci di menu in orizzontale come se fossero una cella di tabella*/
+    background-image: url(menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:100%;
+    height:100%;
+    top: -80%;
+}
+
+
+
+/*
+nav ul:after {
+	content: ""; clear: both; display: block;
+	}*/
+	
+#logo ul li {
+	float: left;
+    width:100%;
+    height:100%;
+    padding: 0;
+    margin-left: -100%;
+    
+}	
+		
+		#logo ul li a { /*stile del link del munu */
+		display: block;
+        color: black;
+        text-decoration: none;
+        background-color: #f3e5e5;
+        padding: 0;
+	}
+    
+#logo ul ul {
+    background: black;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    
+    }
+     
+
+#logo ul ul li {
+		float: none; 
+		position: relative; /*posizione di ogni singola voce del sottomenu == statica */ 
+	}
+
+#logo ul ul li a {
+			padding: 0;
+			color: black;
+            font-family: "Krona", sans-serif;
+            font-size: 1em;
+            text-align: center;
+            font-weight: 300;
+            font-style: oblique;
+            margin: 0.1em 0;
+            padding: 0.5em 0;
+		}	
+
+#logo ul ul li a:hover {
+	background: black;
+    color: red;
+        border: 1px groove red;
+			}
+			
+#logo ul ul ul {
+	position: absolute; /*posizione fissa del secondo sottomenu in riferimento al secondo che lo contiene spostato tutto a destra*/
+	left: 100%; 
+	top:0;
+}
+
+}
+   

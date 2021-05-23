@@ -1,0 +1,311 @@
+<html>
+
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="slider_stile.css">
+<script src="hammer.js"></script>
+
+<title>
+</title>
+
+</head>
+
+<body onload="carica()">
+
+<section id="loader"></section>
+
+<section id="vista">
+
+<section id="header">
+
+<div id="titolino">Parrocchia Madonna di Fatima</div>
+<div id="titolo">ESTATE RAGAZZI 2021</div>
+<a href="gsap prova.html" id="logo"></a>
+
+</section>
+
+     <section class="categoria">
+        <div id="pagina">DISEGNI</div>
+        
+        <div id="storia">
+        
+        <div class="Twin"></div>
+        <div class="Tour"></div>
+        <div class="pine"></div>
+        
+        <div class="car"></div>
+        
+        <div class="Twin2"></div>
+        <div class="Tour2"></div>
+        <div class="pine2"></div>
+        
+        </div>
+        
+    </section>
+
+<section class="elenco">
+   
+    <section class="singolo">
+   
+        <div id="capitolo1" class="contenitore">
+            <div class="capitolo">PERSONA 1
+    
+                <button id="cap1" class="esci" value="false" onclick="apri('A', this.id, 0)">v</button>
+    
+            <div id="AWrapper" class="slideshow-container">
+                <div class="mySlides1 fade">
+                    <img src="35079.png">
+                </div>
+
+                <div class="mySlides1 fade">
+                    <img src="94555.png">
+                </div>
+
+                <div class="mySlides1 fade">
+                    <img src="99963.png">
+                </div>
+
+                <button class="prev" onclick="plusSlides(-1, 0)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1, 0)">&#10095;</button>
+            </div>
+    
+            </div>
+            
+        </div>
+     
+    </section>
+    
+    <section class="singolo">
+   
+        <div id="capitolo2" class="contenitore">
+            <div class="capitolo">PERSONA 2
+    
+                <button id="cap2" class="esci" value="false" onclick="apri('B', this.id, 1)">v</button>
+    
+                <div id="BWrapper" class="slideshow-container">
+                    <div class="mySlides2 fade">
+                        <img src="35079.png">
+                    </div>
+
+                    <div class="mySlides2 fade">
+                        <img src="94555.png">
+                    </div>
+
+                    <div class="mySlides2 fade">
+                        <img src="99963.png">
+                    </div>
+
+                    <button class="prev" onclick="plusSlides(-1, 1)">&#10094;</button>
+                    <button class="next" onclick="plusSlides(1, 1)">&#10095;</button>
+                
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+    
+    <section class="singolo">
+   
+        <div id="capitolo3" class="contenitore">
+            <div class="capitolo">PERSONA 3
+                <button id="cap3" class="esci" value="false" onclick="apri('C', this.id, 2)">v</button>
+    
+                <div id="CWrapper" class="slideshow-container">
+                    <div class="mySlides3 fade">
+                        <img src="35079.png">
+                    </div>
+
+                    <div class="mySlides3 fade">
+                        <img src="94555.png">
+                    </div>
+
+                    <div class="mySlides3 fade">
+                        <img src="99963.png">
+                    </div>
+
+                    <button class="prev" onclick="plusSlides(-1, 2)">&#10094;</button>
+                    <button class="next" onclick="plusSlides(1, 2)">&#10095;</button>
+                
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+    
+</section>  
+
+<section id="footer">
+
+<div class="colonna1">
+<ul>
+<li>Ufficio parrocchiale: Via Citta di Alba 32, Pinerolo (TO)</li>
+<li>Indirizzo e-mail parrocchia: parrocchia.madonnafatima@gmail.com</li>
+</ul>
+</div>
+
+<div class="colonna2">
+<ul>
+<li>Telefono ufficio: 0123 456789</li>
+<li>Indirizzo e-mail animatori: gruppogiovani.maddonafatima@gmail.com</li>
+</ul>
+</div>
+
+</section>
+
+</section>
+
+</body>
+
+<footer>
+
+<script src="includiSwipe.js"></script>
+
+<script>
+
+var grandezzaSlider = 0;
+
+var footerSize=150; //350 a dimensione totale
+var wrapperFooterSize;
+
+var tx = gsap.timeline({});
+
+tx.from(".Twin", {duration: 1, y:100})
+  .from(".Tour", {duration: 1, y:100}, "-=0.9")
+  .from(".pine", {duration: 1, y:100}, "-=0.9")
+  .from(".Twin2", {duration: 1, y:100}, "-=0.9")
+  .from(".Tour2", {duration: 1, y:100}, "-=0.9")
+  .from(".pine2", {duration: 1, y:100}, "-=0.9")
+  .from(".car", {duration: 2, x:1000}); 
+  tx.to(".car", {duration: 2, x: -1000}, "+=5");
+ 
+var attivo = [3];
+var mobile = false;
+var tablet = false;
+var dimensione = window.matchMedia("(max-width: 600px)"); 
+var dimensione2 = window.matchMedia("(max-width: 1023px)"); 
+
+function carica(){
+    setTimeout(function(){
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("vista").style.display = "inline"; }, 1000);
+} 
+ 
+function controlloMediaQuery() {
+  if (dimensione.matches) { // If media query matches
+    mobile = true;
+  } else if (dimensione2.matches){
+    mobile = false;
+    tablet = true;
+  }
+  else{
+    mobile = false;
+    tablet = false;
+  }
+} 
+ 
+function apri(idImmagini, bottone, posizione){
+
+var valore = document.getElementById(bottone).getAttribute('value');
+var wrapper = idImmagini+"Wrapper";
+var altezzaI = "100%";
+var altezzaW;
+controlloMediaQuery();
+if(mobile){
+  altezzaW = "12em";
+  }
+  else if(tablet){
+    altezzaW= "20em";
+    }
+  else{altezzaW = "25em";}
+
+
+if(valore === "false"){
+    document.getElementById(bottone).setAttribute('value', "true");
+    document.getElementById(bottone).innerHTML = "^";
+    attivo [posizione] = true;
+    aggiustaFooter();
+    showSlides(0, posizione);
+    var t2 = gsap.timeline({});
+    t2.to("#"+wrapper, {duration: 0.4, height: altezzaW, display:"block"});
+    grandezzaSlider = document.getElementById(wrapper).offsetWidth;
+}
+else {
+    document.getElementById(bottone).setAttribute('value', "false");
+    document.getElementById(bottone).innerHTML = "v";
+    attivo [posizione] = false;
+    var t2 = gsap.timeline({});
+    t2.to("#"+wrapper, {duration: 0.4, height:0, display:"none"});
+    riduciFooter();
+      
+}
+
+}
+
+function aggiustaFooter(){
+if(attivo){
+footerSize = footerSize + 90; 
+wrapperFooterSize = footerSize+"%";
+document.getElementById("footer").style.top = wrapperFooterSize;
+}
+else{
+footerSize = footerSize + 45; 
+wrapperFooterSize = footerSize+"%";
+document.getElementById("footer").style.top = wrapperFooterSize;
+}
+}
+
+function riduciFooter(){
+if(attivo){
+footerSize = footerSize - 90; 
+wrapperFooterSize = footerSize+"%";
+document.getElementById("footer").style.top = wrapperFooterSize;
+}
+else{
+footerSize = footerSize - 45; 
+wrapperFooterSize = footerSize+"%";
+document.getElementById("footer").style.top = wrapperFooterSize;
+}
+}
+
+var slideIndex = [1,2];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"];
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < x.length; i++) {
+  if(attivo[i]===true){
+     x[slideIndex[no]-1].style.display = "inline-block";
+     /*var numero = x[slideIndex[no]-1].offsetWidth;
+     alert(numero);
+     alert(grandezzaSlider);
+     var newMargine = (grandezzaSlider-numero)/2;
+     alert(newMargine);
+     x[slideIndex[no]-1].style.marginLeft = newMargine;*/
+     }
+  }
+   
+}
+</script>
+
+</footer>
+
+</html>
