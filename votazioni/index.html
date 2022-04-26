@@ -40,6 +40,9 @@
         
         if(json.products[i].Voti > max){
           listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
+          listItem.innerHTML +=' numero voti ' + json.products[i].Voti + '.';
+          listItem.innerHTML +=' Vivo ?: <strong>' + json.products[i].Alive + '</strong>';
+          myList.appendChild(listItem);
         }
         
       }
