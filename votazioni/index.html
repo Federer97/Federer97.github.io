@@ -33,8 +33,8 @@
       for(var i = 0; i < json.products.length; i++) {
         var listItem = document.createElement('li');
         listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
-        listItem.innerHTML +=' can be found in ' + json.products[i].Location + '.';
-        listItem.innerHTML +=' Cost: <strong>£' + json.products[i].Price + '</strong>';
+        listItem.innerHTML +=' numero voti ' + json.products[i].Voti + '.';
+        listItem.innerHTML +=' Vivo?: <strong>£' + json.products[i].Alive + '</strong>';
         myList.appendChild(listItem);
       }
     })
