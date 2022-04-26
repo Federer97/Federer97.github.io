@@ -30,12 +30,18 @@
       return response.json();
     })
     .then(function(json) {
+      var max = 0;
       for(var i = 0; i < json.products.length; i++) {
-        var listItem = document.createElement('li');
+        /*var listItem = document.createElement('li');
         listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
         listItem.innerHTML +=' numero voti ' + json.products[i].Voti + '.';
-        listItem.innerHTML +=' Vivo?: <strong>£' + json.products[i].Alive + '</strong>';
-        myList.appendChild(listItem);
+        listItem.innerHTML +=' Vivo ?: <strong>' + json.products[i].Alive + '</strong>';
+        myList.appendChild(listItem);*/
+        
+        if(json.products[i].Voti > max){
+          listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
+        }
+        
       }
     })
     .catch(function(error) {
