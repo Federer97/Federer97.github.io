@@ -15,10 +15,16 @@
 
 <body>
 <h1>Chi vuoi votare?</h1>
+
+
 <ul>
 </ul>
 
+<button onclick="inviato">INVIA</button>
+
 </body>
+
+
 <script>
     var myList = document.querySelector('ul');
 
@@ -33,6 +39,7 @@
             var max = 0;
             for(var i = 0; i < json.products.length; i++) {
                 var listItem = document.createElement('li');
+                var buttonListItem = document.createElement('radio');
                 /*listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
                 listItem.innerHTML +=' numero voti ' + json.products[i].Voti + '.';
                 listItem.innerHTML +=' Vivo ?: <strong>' + json.products[i].Alive + '</strong>';
@@ -46,7 +53,7 @@
                 }*/
 
                 if(json.products[i].Alive){
-                    listItem.innerHTML = json.products[i].Name;
+                    buttonListItem.innerHTML = json.products[i].Name;
                     switch (json.products[i].Team){
                         case "teamA":
                             listItem.id = "teamA";
@@ -63,6 +70,9 @@
                         default:
                             break;
                     }
+
+                    listItem.appendChild(buttonListItem);
+
                     myList.appendChild(listItem);
                 }
 
@@ -75,6 +85,18 @@
             );
             document.body.insertBefore(p, myList);
         });
+
+    var div = document.createElement("div");
+
+    div.innerHTML =
+
+    '<form action="/action_page.php" method="post" target="_blank"> '+
+        '<label htmlFor="fname">json.products[i].Name</label> '+
+       ' <input type="radio" id=i name="fname"></input> '+
+       ' <input type="submit" value="Submit"/>' +
+    '</form>';
+
+    document.body.appendChild(div);
 
 </script>
 </html>
