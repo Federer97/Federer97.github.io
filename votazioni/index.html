@@ -38,8 +38,8 @@
         .then(function(json) {
             var max = 0;
             for(var i = 0; i < json.products.length; i++) {
-                var listItem = document.createElement('li');
-                var buttonListItem = document.createElement('radio');
+                //var listItem = document.createElement('li');
+                //var buttonListItem = document.createElement('radio');
                 /*listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
                 listItem.innerHTML +=' numero voti ' + json.products[i].Voti + '.';
                 listItem.innerHTML +=' Vivo ?: <strong>' + json.products[i].Alive + '</strong>';
@@ -52,28 +52,39 @@
                   myList.appendChild(listItem);
                 }*/
 
+                var div = document.createElement("div");
+
+                div.innerHTML =
+
+                    '<form action="/action_page.php" method="get"> '+
+                    '<label htmlFor="fname">'+json.products[i].Name+'</label> '+
+                    ' <input type="radio" id='+i+' name="fname"></input> '+
+                    ' <input type="submit" value="Submit"/>' +
+                    '</form>';
+
+                document.body.appendChild(div);
+
                 if(json.products[i].Alive){
-                    buttonListItem.innerHTML = json.products[i].Name;
                     switch (json.products[i].Team){
                         case "teamA":
-                            listItem.id = "teamA";
+                            div.id = "teamA";
                             break;
                         case "teamB":
-                            listItem.id = "teamB";
+                            div.id = "teamB";
                             break;
                         case "teamC":
-                            listItem.id = "teamC";
+                            div.id = "teamC";
                             break;
                         case "teamD":
-                            listItem.id = "teamD";
+                            div.id = "teamD";
                             break;
                         default:
                             break;
                     }
 
-                    listItem.appendChild(buttonListItem);
+                    //listItem.appendChild(buttonListItem);
 
-                    myList.appendChild(listItem);
+                    //myList.appendChild(listItem);
                 }
 
             }
@@ -85,18 +96,6 @@
             );
             document.body.insertBefore(p, myList);
         });
-
-    var div = document.createElement("div");
-
-    div.innerHTML =
-
-    '<form action="/action_page.php" method="post" target="_blank"> '+
-        '<label htmlFor="fname">json.products[i].Name</label> '+
-       ' <input type="radio" id=i name="fname"></input> '+
-       ' <input type="submit" value="Submit"/>' +
-    '</form>';
-
-    document.body.appendChild(div);
 
 </script>
 </html>
