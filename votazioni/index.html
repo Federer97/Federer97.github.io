@@ -56,7 +56,7 @@
 
                 div.innerHTML =
 
-                    '<form action="votazioni/sended.html" method="get"> '+
+                    '<form action="./sended.html" method="get"> '+
                     '<label htmlFor="fname">'+json.products[i].Name+'</label> '+
                     ' <input type="radio" id='+i+' name="fname"></input> '+
                     ' <input type="submit" value="Submit"/>' +
@@ -96,6 +96,20 @@
             );
             document.body.insertBefore(p, myList);
         });
+
+    function inviato(){
+        const fs = require('fs');
+        const fileName = './giocatori.json';
+        const file = require(fileName);
+        
+        file.key = "new value";
+
+        fs.writeFile(fileName, JSON.stringify(file), function writeJSON(err) {
+            if (err) return console.log(err);
+            console.log(JSON.stringify(file));
+            console.log('writing to ' + fileName);
+        });
+    }
 
 </script>
 </html>
